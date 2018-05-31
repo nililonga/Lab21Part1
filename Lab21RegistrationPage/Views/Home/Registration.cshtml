@@ -5,12 +5,29 @@
 
 <h2>Registration</h2>
 
-<form action="/Home/Welcome">
-    Enter name: <input type="text" name="input" />
-    
-    
+
+<form action="/Home/Welcome" method="post" onsubmit="CheckUser()">
+    <input type="text" name="input" placeholder="First name" /> <br />
+    <input type="text" name="input2" placeholder=" Last Name" /> <br />
+    <input type="email" name="input3" placeholder="Email" /> <br />
+    <input type="text" name="input4" placeholder="Fav Coffee Flavor" /> <br />
+    <input type="text" name="input5" placeholder="Location (Midtown or Downtown)" /> <br />
+    <input type="text" name="input6" placeholder="User Name" /> <br />
+    <input type="text" name="input7" placeholder="Password" /> <br />
+
     <input type="submit" value="Register Now!" />
+    
+        <input type="submit" value="Create"
+            onclick="CheckUser()" />
 
+</form >
+    <script>
+            function CheckUser(input6) {
+                if (input6.value.length < 8) {
+                    alert("User name invalid, must be at least 8 characters in length")
+                    return`;
+                }
 
-</form>
+            }
+    </script>
 <h1>@ViewBag.info</h1>

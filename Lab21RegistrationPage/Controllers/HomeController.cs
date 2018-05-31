@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Lab21RegistrationPage.Models;
+
 
 namespace Lab21RegistrationPage.Controllers
 {
@@ -10,6 +12,10 @@ namespace Lab21RegistrationPage.Controllers
     {
         public ActionResult Index()
         {
+            CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
+
+            ViewBag.Items = ORM.Items.ToList();
+            
             return View();
         }
 
@@ -32,9 +38,17 @@ namespace Lab21RegistrationPage.Controllers
             
             return View();
         }
-        public ActionResult Welcome (string INPUT = null)
+        public ActionResult Welcome (Item data)
         {
-            ViewBag.info = INPUT;
+
+            CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
+            if (ModelState.IsValid)
+            {
+                ORM.Items.Add(data);
+                ORM.SaveChanges();
+            }
+
+            ViewBag.info = data.Name;
             return View();
         }
     }

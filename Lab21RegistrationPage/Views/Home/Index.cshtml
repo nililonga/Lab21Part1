@@ -8,24 +8,27 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="/Home/Register">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@*I first display all the items in the viewbag*@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @for (int i = 0; i < ViewBag.Items.Count; i++)
+    {
+        <tr>
+            <td>@ViewBag.Items[i].Name</td>
+            <td>@ViewBag.Items[i].Description</td>
+            <td>@ViewBag.Items[i].Quantity</td>
+            <td>@ViewBag.Items[i].Price</td>
+        </tr>
+    }
+
+</table>
+<form action="/Home/Welcome">
+    <input type="text" name="Description" />
+    <input type="email" name="Email" />
+    <input type="submit" value="Add Item" />
+</form>

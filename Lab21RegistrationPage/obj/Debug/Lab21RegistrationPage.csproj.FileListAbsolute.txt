@@ -89,3 +89,7 @@ c:\users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\obj\Debu
 c:\users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\obj\Debug\Lab21RegistrationPage.csproj.CopyComplete
 c:\users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\obj\Debug\Lab21RegistrationPage.dll
 c:\users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\obj\Debug\Lab21RegistrationPage.pdb
+C:\Users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\bin\EntityFramework.dll
+C:\Users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\bin\EntityFramework.SqlServer.dll
+C:\Users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\bin\EntityFramework.xml
+C:\Users\noeil\source\repos\Lab21RegistrationPage\Lab21RegistrationPage\bin\EntityFramework.SqlServer.xml
