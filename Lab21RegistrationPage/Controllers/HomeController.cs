@@ -10,6 +10,8 @@ namespace Lab21RegistrationPage.Controllers
 {
     public class HomeController : Controller
     {
+
+        
         public ActionResult Index()
         {
             CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
@@ -49,7 +51,9 @@ namespace Lab21RegistrationPage.Controllers
             }
 
             ViewBag.info = data.Name;
-            return View();
+
+                            return View();
         }
+       
     }
 }
