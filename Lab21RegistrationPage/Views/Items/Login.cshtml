@@ -18,19 +18,19 @@
     
     function checkAll() {
         var input1 = document.forms["form"]["input"].value;
+        var input2 = document.forms["form"]["input"].value;
         console.log(input1);
+        console.log(input2);
         if (input1.length < 6) {
             alert("bad username, try again");
             return false;
         }
-        var input2 = document.forms["form"]["input"].value;
-        console.log(input2);
-        if (input2.length < 6) {
+        else if (input2.length < 6) {
             alert("bad username, try again");
             return false;
         }
     }
-
+    
 </script>
 
 <!----onclick="return checkAll()"-->
